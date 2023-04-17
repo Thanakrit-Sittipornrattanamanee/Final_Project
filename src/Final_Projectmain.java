@@ -131,12 +131,12 @@ public class Final_Projectmain {
                 
                 if (room == 1)
                 {
-                	 System.out.println(" Total price : $ " + guest.getBetweenDay() * 15000);
+                	 System.out.println(" Total price : $ " + guest.getBetweenDay() * 1500);
                 }
 
                 else
                 {
-                	 System.out.println(" Total price :  $ " + guest.getBetweenDay() * 25000);
+                	 System.out.println(" Total price :  $ " + guest.getBetweenDay() * 3000);
                 }
 
                 if (room == 1)
@@ -176,7 +176,7 @@ public class Final_Projectmain {
     public static void Namearray(int member1) {
 
         int[] phNum = new int[2];
-        String YN, Name;
+        String YN;
 
         System.out.println(" --------------------------------");
         System.out.print(" Do you want to confirm\nYes or No:\n:");
@@ -188,8 +188,6 @@ public class Final_Projectmain {
             case "YES":
 
                 System.out.print(" Please give your name\n:");
-                Name = String.valueOf(new Scanner(System.in).nextLine());
-
                 if (member1 >= 2) {
                     System.out.println(" Please leave some of your phone number");
                     for (int i = 0; i < phNum.length; i++) {
