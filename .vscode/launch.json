@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Final_Projectmain",
+            "request": "launch",
+            "mainClass": "Final_Projectmain",
+            "projectName": "Final_Project_9da03e6e"
+        },
+        {
             "name": "Java",
             "type": "java",
             "request": "launch",

@@ -35,6 +35,7 @@ public class Final_Projectmain {
             System.out.println("--------------------------------");
             System.out.println(" Would you like to Booking a room?");
             System.out.println(" (1) Yes or (2) No ");
+            System.out.println(" Please write only number!");
             
             int reserve = tce.tryPaseInt("You selected: ");
 
@@ -202,16 +203,24 @@ public class Final_Projectmain {
 
             case "YES":
 
+                System.out.print(" Please give your name:");
+                YN = String.valueOf(new Scanner(System.in).nextLine());
+
                 if (member1 >= 2) {
-                     System.out.print(" Please enter your name\n:");
-                    System.out.println(" Please leave a phone number and a backup phone number below.");
+                    System.out.println(" Please leave some of your phone number and another contact for us please");
                     for (int i = 0; i < phNum.length; i++) {
                         System.out.print(" : ");
                         phNum[i] = Integer.parseInt(new Scanner(System.in).nextLine());
 
                     }
+
                 } 
-                
+                else 
+                {
+                    System.out.println(" Thanks for asking ");
+                    
+                }
+                break;
                 
 
             case "NO":
