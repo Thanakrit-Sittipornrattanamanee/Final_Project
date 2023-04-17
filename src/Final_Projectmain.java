@@ -64,7 +64,7 @@ public class Final_Projectmain {
 
 
                         System.out.println(" Please select room size");
-                        System.out.println(" (1)" + normalRoom.getRoomSize() + "or (2)" + sweetRoom.getRoomSize() + "or (3)" + luxuryRoom.getRoomSize());
+                        System.out.println("(1) " + normalRoom.getRoomSize() + " (2) " + sweetRoom.getRoomSize() + " (3) " + luxuryRoom.getRoomSize());
 
                         room = tce.tryPaseInt(" Your choice: ");
 
@@ -75,7 +75,7 @@ public class Final_Projectmain {
 
                                 guest.setGuestRoom(normalRoom);
 
-                                System.out.println(" Price 1/day for" + guest.getGuestRoom().getRoomSize() + "is $" + guest.getGuestRoom().getCost());
+                                System.out.println(" Price 1/day for " + guest.getGuestRoom().getRoomSize() + " is $ " + guest.getGuestRoom().getCost());
                                 System.out.println();
 
                                 break;
@@ -83,7 +83,7 @@ public class Final_Projectmain {
                             case 2:
 
                                 guest.setGuestRoom(sweetRoom);
-                                System.out.println(" Price 1/day for " + guest.getGuestRoom().getRoomSize()  + " is $" + guest.getGuestRoom().getCost());
+                                System.out.println(" Price 1/day for " + guest.getGuestRoom().getRoomSize()  + " is $ " + guest.getGuestRoom().getCost());
                                 System.out.println();
 
                                 break;
@@ -91,7 +91,7 @@ public class Final_Projectmain {
                             case 3:
 
                                 guest.setGuestRoom(luxuryRoom);
-                                System.out.println(" Price 1/day for " + guest.getGuestRoom().getRoomSize()  + " is $" + guest.getGuestRoom().getCost());
+                                System.out.println(" Price 1/day for " + guest.getGuestRoom().getRoomSize()  + " is $ " + guest.getGuestRoom().getCost());
                                 System.out.println();
 
                                 break;
@@ -124,7 +124,7 @@ public class Final_Projectmain {
                         System.out.println(" *Over limit*");
                     } //else
                     
-                } while (room >= 3);
+                } while (room >= 4);
 
 
                 System.out.println(" --------------------------------");
@@ -133,7 +133,7 @@ public class Final_Projectmain {
                 System.out.println(" Check - in :" + guest.getCheckIn().getDate());
                 System.out.println(" Check - out :" + guest.getCheckOut().getDate());
                 System.out.println(" Total days: " + guest.getBetweenDay());
-                System.out.println(" Total customer : " + guest.getMember());
+                System.out.println(" Total guests: " + guest.getMember());
                 
                 if (room == 1)
                 {
@@ -144,57 +144,57 @@ public class Final_Projectmain {
                 {
                 	 System.out.println(" Total price :  $ " + guest.getBetweenDay() * 3000);
                 }
-                else
+                else 
                 {
                 	 System.out.println(" Total price :  $ " + guest.getBetweenDay() * 6000);
                 }
             }
                 if (room == 1)
                 {
-                    System.out.println(" Room size : Normal Room");
+                    System.out.println(" Room type : Normal Room");
                 }
 
                 else if (room == 2)
                 {
-                    System.out.println(" Room size : Sweet room");
+                    System.out.println(" Room type : Sweet room");
                 }
 
-                else
+                else if (room == 3)
                 {
-                    System.out.println(" Room size : Luxury room");
+                    System.out.println(" Room type : Luxury room");
                 }
+            if (reserve == 2) 
+            {
+                System.out.println("We're sorry we weren't able to help you.");
+            } //Else if
+   
 
                 Namearray(guest.getMember());
 
              //if
 
-             if (reserve == 2) 
-            {
-                System.out.println("We're sorry we weren't able to help you.");
-            } //Else if
-
             System.out.println(" --------------------------------");
             
-            System.out.println(" Would you like to Booking your room again?" );
-            System.out.println(" Enter 1 for Booking Room ");
-            System.out.println(" Enter 2 for End");
+            System.out.println(" Would you like to book another room?" );
+            System.out.println(" (1) for Booking Room ");
+            System.out.println(" (2) for End");
 
-            a = tce.tryPaseInt("You select:");
+            a = tce.tryPaseInt("You selected: ");
 
         } while (a != 2);
 
-        System.out.println(" Thank you for your Interesting .");
-
+        System.out.println(" We're glad to be able to help you today.");
+        
       } //Main
 
 
-    public static void Namearray(int member1) {
+    public static void Namearray(int member1) { 
 
         int[] phNum = new int[2];
         String YN;
 
         System.out.println(" --------------------------------");
-        System.out.print(" Do you want to confirm\nYes or No:\n:");
+        System.out.print(" Do you want to confirm\nYES or NO:\n:");
         YN = String.valueOf(new Scanner(System.in).nextLine());
         String YN2 = YN.toUpperCase();
 
@@ -202,19 +202,19 @@ public class Final_Projectmain {
 
             case "YES":
 
-                System.out.print(" Please give your name\n:");
                 if (member1 >= 2) {
-                    System.out.println(" Please leave some of your phone number");
+                     System.out.print(" Please enter your name\n:");
+                    System.out.println(" Please leave a phone number and a backup phone number below.");
                     for (int i = 0; i < phNum.length; i++) {
                         System.out.print(" : ");
                         phNum[i] = Integer.parseInt(new Scanner(System.in).nextLine());
 
                     }
-
                 } 
                 
+                
 
-            case "NO" :
+            case "NO":
 
                 Stack<String>Thank=new Stack<>();
                 Thank.push(" Thank you for your attention.");
