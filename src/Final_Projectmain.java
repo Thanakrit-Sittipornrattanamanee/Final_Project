@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.Scanner;
 import java.text.DateFormatSymbols;
 
-//sup
+//supp
 
 public class Final_Projectmain {
     static Scanner keyboard = new Scanner(System.in);
