@@ -7,6 +7,7 @@ import java.text.DateFormatSymbols;
 
 
 public class Final_Projectmain {
+
     static Scanner keyboard = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -32,12 +33,12 @@ public class Final_Projectmain {
             guest.setCheckOut(checkOut);
 
             System.out.println(" Welcome to YEORUEM Hotel ");
-            System.out.println("--------------------------------");
-            System.out.println(" Would you like to Booking a room?");
+            System.out.println("--------------------------------------");
+            System.out.println(" Would you like to book a room?");
             System.out.println(" (1) Yes or (2) No ");
-            System.out.println(" Please write only number!");
+            System.out.println(" Please enter only number!");
             
-            int reserve = tce.tryPaseInt("You selected: ");
+            int reserve = tce.tryPaseInt(" Your selection : ");
 
 
 
@@ -46,7 +47,7 @@ public class Final_Projectmain {
             {
 
 
-                System.out.println("--------------------------------");
+                System.out.println("--------------------------------------");
 
                 System.out.print(" Enter your date of check-in : ");
                 checkIn.setDate(keyboard.nextLine());
@@ -54,8 +55,8 @@ public class Final_Projectmain {
                 System.out.print(" Enter your date of check-out : ");
                 checkOut.setDate(keyboard.nextLine());
 
-                System.out.println("--------------------------------");               
-                System.out.print(" How many guests?: ");
+                System.out.println("--------------------------------------");               
+                System.out.print(" How many guests? : ");
 
                 guest.setMember(keyboard.nextInt());
 
@@ -64,10 +65,10 @@ public class Final_Projectmain {
                     if (guest.getMember() > 0) {
 
 
-                        System.out.println(" Please select room size");
+                        System.out.println(" Please select room size :");
                         System.out.println("(1) " + normalRoom.getRoomSize() + " (2) " + sweetRoom.getRoomSize() + " (3) " + luxuryRoom.getRoomSize());
 
-                        room = tce.tryPaseInt(" Your choice: ");
+                        room = tce.tryPaseInt(" Your choice : ");
 
 
                         switch (room) {
@@ -128,7 +129,7 @@ public class Final_Projectmain {
                 } while (room >= 4);
 
 
-                System.out.println(" --------------------------------");
+                System.out.println("--------------------------------------");
                 
                 System.out.println(" Your Reservation ");
                 System.out.println(" Check - in :" + guest.getCheckIn().getDate());
@@ -174,7 +175,7 @@ public class Final_Projectmain {
 
              //if
 
-            System.out.println(" --------------------------------");
+            System.out.println("--------------------------------------");
             
             System.out.println(" Would you like to book another room?" );
             System.out.println(" (1) for Booking Room ");
@@ -183,8 +184,21 @@ public class Final_Projectmain {
             a = tce.tryPaseInt("You selected: ");
 
         } while (a != 2);
-
+        
         System.out.println(" We're glad to be able to help you today.");
+
+
+        ArrayList<String> rating = new ArrayList<String>();
+        rating.add("{1) Poor");
+        rating.add("(2) Could be better");
+        rating.add("(3) Satisfactory");
+        rating.add("(4) Excellent");
+        System.out.println("--------------------------------------");
+        System.out.println(" Please rate our service today : ");
+        System.out.println(rating);
+        tce.tryPaseInt(" Your selection : ");
+        System.out.println(" Thank you! Your feedback will help us provide better service in the future. ");
+        
         
       } //Main
 
@@ -194,8 +208,8 @@ public class Final_Projectmain {
         int[] phNum = new int[2];
         String YN;
 
-        System.out.println(" --------------------------------");
-        System.out.print(" Do you want to confirm\nYES or NO:\n:");
+        System.out.println("--------------------------------------");
+        System.out.print(" Do you want to confirm\n YES or NO:\n:");
         YN = String.valueOf(new Scanner(System.in).nextLine());
         String YN2 = YN.toUpperCase();
 
@@ -203,11 +217,11 @@ public class Final_Projectmain {
 
             case "YES":
 
-                System.out.print(" Please give your name:");
+                System.out.print(" Please give your name : ");
                 YN = String.valueOf(new Scanner(System.in).nextLine());
 
                 if (member1 >= 2) {
-                    System.out.println(" Please leave some of your phone number and another contact for us please");
+                    System.out.println(" Please leave two reachable contact numbers : ");
                     for (int i = 0; i < phNum.length; i++) {
                         System.out.print(" : ");
                         phNum[i] = Integer.parseInt(new Scanner(System.in).nextLine());
@@ -217,7 +231,7 @@ public class Final_Projectmain {
                 } 
                 else 
                 {
-                    System.out.println(" Thanks for asking ");
+                    System.out.println(" Thank you for using our services today!");
                     
                 }
                 break;
