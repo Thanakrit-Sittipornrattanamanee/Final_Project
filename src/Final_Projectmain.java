@@ -1,10 +1,9 @@
-
 import java.time.*;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.util.Scanner;
 import java.text.DateFormatSymbols;
-
+import java.io.*;
 
 public class Final_Projectmain {
 
@@ -198,9 +197,29 @@ public class Final_Projectmain {
         System.out.println(rating);
         tce.tryPaseInt(" Your selection : ");
         System.out.println(" Thank you! Your feedback will help us provide better service in the future. ");
-        
-        
-      } //Main
+
+        try {
+            File file = new File("output.txt");
+            if (file.createNewFile()) {
+                System.out.println("File created: " + file.getName());
+                try {
+                    FileOutputStream fos = new FileOutputStream("output.txt");
+                    PrintStream ps = new PrintStream(fos);
+                    System.setOut(ps);
+                    System.out.println("You have completed a booking today!");
+                    System.setOut(ps);
+                    ps.close();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+            }
+         } else {
+                System.out.println("File already exists.");
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
 
 
     public static void Namearray(int member1) { 
