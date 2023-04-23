@@ -110,9 +110,7 @@ public class Final_Projectmain {
                     } // if (member == 0)
 
 
-                    else if (guest.getMember() > 0) {
-
-                        guest.setGuestRoom(sweetRoom);
+                    else if (guest.getMember() > 2) {
 
                         System.out.println(" Your room  is "+ guest.getGuestRoom().getRoomSize()+" room");
 
@@ -120,11 +118,6 @@ public class Final_Projectmain {
 
                     } //else if(member >= 5 && member <= 10)
 
-                    else 
-                    {
-                        System.out.println(" *Over limit*");
-                    } //else
-                    
                 } while (room >= 4);
 
 
